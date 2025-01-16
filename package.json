@@ -6,7 +6,7 @@
   "scripts": {
     "build:service-worker": "esbuild src/service-worker/sw.js --loader:.js=jsx --bundle --outdir=dist",
     "build:client": "esbuild src/client/index.js --bundle --outdir=dist",
-    "build": "npm run build:service-worker && npm run build:client && mv src/client/index.html dist/index.html",
+    "build": "npm run build:service-worker && npm run build:client && cp src/client/index.html dist/index.html",
     "start": "http-server ./dist"
   },
   "author": "Jeremy Karlsson <karlsson@jeremy.se>",
